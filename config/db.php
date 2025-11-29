@@ -29,3 +29,10 @@ catch(PDOException $e){
         "message" => "Database connection failed.Please contact adminstrator"
     ]));
 }
+/**
+ * start session if not already started
+ */
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
